@@ -1,14 +1,31 @@
 <!-- 主页 -->
-<ul>
-<% page.posts.each(post=>{ %>
-    <li>
-        <a href="<%=url_for(post.path)%>">
-            <%= post.title %>
-        </a>
-        | <%- date( post.date , 'YYYY/MM/DD HH:mm') %> 
-    </li>
-<% }) %>
-</ul>
+
+<div>
+    <div class="index_content">
+        <% page.posts.each(post=>{ %>
+            <div class="index_title">
+                <div class="index_title_left">
+                    <a href="<%=url_for(post.path)%>">
+                        <%= post.title %>
+                    </a>
+                </div>
+                <div class="index_title_right">
+                    <%- date( post.date , 'YYYY/MM/DD HH:mm') %>
+                </div>
+            </div>
+            <div>
+                <!-- excerpt 摘要 -->
+                <% if (post.excerpt) { %>
+                    <%- post.excerpt %>
+                <% } else { %>
+                    <%- post.content %>
+                <% } %>
+            </div>
+        <% }) %>
+    </div>
+</div>
+
+
 
 <%- paginator({
     prev_text: '<',

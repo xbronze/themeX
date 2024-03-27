@@ -1,0 +1,16 @@
+<!-- 页首菜单 -->
+<div class="menu_nav">
+    <div>
+      <a href="<%- config.root %>"><%- config.title %></a>
+    </div>
+    <ul class="menu_ul">
+        <% theme.menu.forEach(function(m) {%>
+            <li style="padding-inline: 10px;">
+                <a href="<%- config.root %><%- m.url %>" title="<%- m.intro %>">
+                    <i class="<%- m.icon %>"></i><%- m.title %>
+                </a>
+            </li>
+        <%})%>
+    </ul>
+    
+</div>

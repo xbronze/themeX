@@ -1,0 +1,35 @@
+
+.menu_nav {
+    height: 30px;
+    display: flex;
+    border-bottom: 1px solid #000;
+}
+
+.menu_ul {
+    margin: inherit;
+    list-style: none;
+}
+
+li {
+    float: left;
+}
+
+/**/
+.index_content {
+    margin: 50px 30px 0px ;
+}
+
+.index_title {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.index_title_left {
+    width: 70%;
+    float: left;
+}
+
+.index_title_right {
+    width: 30%;
+    float: left;
+}
